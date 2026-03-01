@@ -1,0 +1,19 @@
+# Converge API Test File
+# This file documents and tests all REST endpoints.
+# Testing instructions:
+# 1.) Run test.http file, then click the run button next to the POST line below
+
+### Health Check
+GET http://localhost:8080/health
+
+### Plan Trip 
+POST http://localhost:8080/trips/plan
+Content-Type: application/json
+
+{
+  "destination": "Yosemite Valley",
+  "participants": [
+    {"id": "A", "origin": "San Francisco"},
+    {"id": "B", "origin": "San Jose"}
+  ]
+}
